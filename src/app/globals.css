@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Light theme (default) */
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White */
+    --foreground: 240 10% 3.9%; /* Dark Gray */
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 240 10% 3.9%; /* Dark Gray */
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 240 10% 3.9%; /* Dark Gray */
+    --primary: 180 100% 25%; /* Teal */
+    --primary-foreground: 0 0% 98%; /* Almost White */
+    --secondary: 240 4.8% 95.9%; /* Light Gray */
+    --secondary-foreground: 240 5.9% 10%; /* Dark Gray */
+    --muted: 240 4.8% 95.9%; /* Light Gray */
+    --muted-foreground: 240 3.8% 46.1%; /* Medium Gray */
+    --accent: 180 80% 35%; /* Lighter Teal for accents */
+    --accent-foreground: 0 0% 98%; /* Almost White */
+    --destructive: 0 84.2% 60.2%; /* Red */
+    --destructive-foreground: 0 0% 98%; /* Almost White */
+    --border: 240 5.9% 90%; /* Gray */
+    --input: 240 5.9% 90%; /* Gray */
+    --ring: 180 100% 25%; /* Teal */
+    --chart-1: 180 70% 40%; /* Teal variant 1 */
+    --chart-2: 200 70% 45%; /* Blue-Teal variant */
+    --chart-3: 160 60% 40%; /* Green-Teal variant */
+    --chart-4: 30 80% 55%; /* Orange variant */
+    --chart-5: 270 70% 50%; /* Purple variant */
+    --radius: 0.5rem;
+    --sidebar-background: 240 4.8% 95.9%; /* Light Gray */
+    --sidebar-foreground: 240 5.9% 10%; /* Dark Gray */
+    --sidebar-primary: 180 100% 25%; /* Teal */
+    --sidebar-primary-foreground: 0 0% 98%; /* Almost White */
+    --sidebar-accent: 180 80% 35%; /* Lighter Teal */
+    --sidebar-accent-foreground: 0 0% 98%; /* Almost White */
+    --sidebar-border: 240 5.9% 90%; /* Gray */
+    --sidebar-ring: 180 100% 25%; /* Teal */
+  }
+}
+
+/* Dark theme */
+@layer base {
+  .dark {
+    --background: 240 10% 3.9%; /* Dark Gray */
+    --foreground: 0 0% 98%; /* Almost White */
+    --card: 240 10% 3.9%; /* Dark Gray */
+    --card-foreground: 0 0% 98%; /* Almost White */
+    --popover: 240 10% 3.9%; /* Dark Gray */
+    --popover-foreground: 0 0% 98%; /* Almost White */
+    --primary: 180 90% 40%; /* Brighter Teal for Dark Mode */
+    --primary-foreground: 240 10% 3.9%; /* Dark Gray for contrast */
+    --secondary: 240 3.7% 15.9%; /* Very Dark Gray */
+    --secondary-foreground: 0 0% 98%; /* Almost White */
+    --muted: 240 3.7% 15.9%; /* Very Dark Gray */
+    --muted-foreground: 240 5% 64.9%; /* Lighter Gray */
+    --accent: 180 80% 35%; /* Same as light mode accent? Adjust if needed */
+    --accent-foreground: 0 0% 98%; /* Almost White */
+    --destructive: 0 72.2% 50.6%; /* Slightly adjusted Red for Dark */
+    --destructive-foreground: 0 0% 98%; /* Almost White */
+    --border: 240 3.7% 15.9%; /* Very Dark Gray */
+    --input: 240 3.7% 15.9%; /* Very Dark Gray */
+    --ring: 180 90% 40%; /* Brighter Teal for Dark Mode */
+    --chart-1: 180 70% 50%; /* Teal variant 1 (adjusted brightness) */
+    --chart-2: 200 70% 55%; /* Blue-Teal variant (adjusted) */
+    --chart-3: 160 60% 50%; /* Green-Teal variant (adjusted) */
+    --chart-4: 30 80% 65%; /* Orange variant (adjusted) */
+    --chart-5: 270 70% 60%; /* Purple variant (adjusted) */
+    --sidebar-background: 240 5.9% 10%; /* Very Dark Gray */
+    --sidebar-foreground: 0 0% 98%; /* Almost White */
+    --sidebar-primary: 180 90% 40%; /* Brighter Teal */
+    --sidebar-primary-foreground: 240 10% 3.9%; /* Dark Gray */
+    --sidebar-accent: 180 80% 35%; /* Same Lighter Teal? */
+    --sidebar-accent-foreground: 0 0% 98%; /* Almost White */
+    --sidebar-border: 240 3.7% 15.9%; /* Very Dark Gray */
+    --sidebar-ring: 180 90% 40%; /* Brighter Teal */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

@@ -1,0 +1,18 @@
+# Build artifacts
+.next
+node_modules
+
+# Docker files
+Dockerfile
+docker-compose.yml
+
+# Git
+.git
+.gitignore
+
+# VSCode
+.vscode
+
+# IDX specific files
+.idx
+README.md

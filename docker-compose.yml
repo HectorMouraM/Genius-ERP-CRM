@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  genius-erp-crm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: genius-erp-crm-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      # Add any other necessary environment variables here
+      # For example:
+      # - NEXT_PUBLIC_JWT_SECRET=your-production-secret
+      # - GOOGLE_GENAI_API_KEY=your-google-api-key
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
