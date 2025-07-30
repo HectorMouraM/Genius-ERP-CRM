@@ -3,8 +3,25 @@ version: '3.8'
 services:
   genius-erp-crm:
     build: .
-    ports:
-      - "2222:2222"
+    container_name: genius-erp-crm
     restart: always
+    networks:
+      - minha_rede
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=minha_rede"
 
+      # Roteamento com domínio
+      - "traefik.http.routers.genius.rule=Host(`genius.laud.tec.br`)"
+      - "traefik.http.routers.genius.entrypoints=websecure"
+      - "traefik.http.routers.genius.tls=true"
+      - "traefik.http.routers.genius.tls.certresolver=letsencryptresolver"
 
+      # (Opcional) Middleware para redirecionar / para /dashboard, etc.
+      # - "traefik.http.middlewares.redirector.redirectregex.regex=^https?://genius.laud.tec.br$$"
+      # - "traefik.http.middlewares.redirector.redirectregex.replacement=https://genius.laud.tec.br/dashboard"
+      # - "traefik.http.routers.genius.middlewares=redirector"
+
+networks:
+  minha_rede:
+    external: true
