@@ -7,7 +7,7 @@ WORKDIR /app
 # 3. Install dependencies
 COPY package.json ./
 # Use npm ci for faster, more reliable builds in CI/CD environments
-RUN npm ci
+RUN npm install
 
 # 4. Copy application code
 COPY . .

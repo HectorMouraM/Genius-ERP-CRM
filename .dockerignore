@@ -16,3 +16,6 @@ docker-compose.yml
 # IDX specific files
 .idx
 README.md
+*.log
+.vscode
+
