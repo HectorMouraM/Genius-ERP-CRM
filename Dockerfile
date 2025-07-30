@@ -26,7 +26,7 @@ COPY --from=base /app/node_modules ./node_modules
 COPY --from=base /app/package.json ./package.json
 
 # Expose the port the app runs on (Next.js default is 3000)
-EXPOSE 3000
+EXPOSE 2222
 
 # Set the user to a non-root user for better security
 USER node
